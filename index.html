@@ -64,6 +64,64 @@
         font-size: 2.5rem;
         margin-bottom: 10px;
       }
+
+    /* Hamburger styles */
+.hamburger {
+  display: none;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  cursor: pointer;
+}
+
+/* Responsive nav for small screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+#backToTop:hover {
+  background-color: #217dbb;
+}
   
       nav ul {
         list-style: none;
@@ -201,6 +259,42 @@
         });
       });
     });
+
+    
+  // Smooth scroll
+  document.addEventListener("DOMContentLoaded", function () {
+    const links = document.querySelectorAll("nav a[href^='#']");
+    links.forEach(link => {
+      link.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 60,
+            behavior: "smooth"
+          });
+        }
+      });
+    });
+
+    // Hamburger toggle
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector("nav ul");
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+
+    // Back to Top
+    const backToTopBtn = document.getElementById("backToTop");
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  });
+
   </script>
 </head>
 <body>
@@ -220,6 +314,9 @@
     </div>
   </header>
 
+  <button class="hamburger" id="hamburger">&#9776;</button>
+  <button id="backToTop" title="Back to Top">&#8679;</button>
+  
   <section id="home">
     <div class="container">
       <h2>Welcome</h2>
