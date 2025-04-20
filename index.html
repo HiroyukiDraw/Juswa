@@ -78,23 +78,7 @@
   cursor: pointer;
 }
 
-/* Responsive nav for small screens */
-@media screen and (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
 
-  nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: var(--primary-color);
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    padding: 10px 0;
-    z-index: 1000;
-  }
 
   nav ul.show {
     display: flex;
@@ -241,6 +225,24 @@
           font-size: 1.5rem;
         }
     }
+
+    /* Responsive nav for small screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    z-index: 1000;
+  }
   </style>
   <script>
     // Smooth scrolling for internal links
