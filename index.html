@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Arlene Macaraig Portfolio - Sr. Accounts Payable Specialist & SAP L1 Support" />
   <title>Arlene Macaraig Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
     :root {
       --primary-color: #2c3e50;
@@ -269,7 +268,7 @@
     <div class="container">
       <img src="Ate.jpg" alt="Portrait of Arlene Macaraig" class="profile-pic" />
       <h1>Arlene Macaraig</h1>
-      <p>Sr. Accounts Payable Specialist - Travel and Expense | SAP L1 Support</p>
+      <p>Sr. Accounts Payable Specialist | SAP L1 Support | Travel and Expense Expert</p>
     </div>
     <nav>
       <div class="nav-container">
@@ -286,10 +285,8 @@
   <main>
     <section id="home">
       <div class="container">
-        <h2>Welcome</h2>
-        <p>Welcome to my personal portfolio! I am Arlene Macaraig, a seasoned Sr. Accounts Payable Specialist with expertise in managing Travel & Expense and providing SAP L1 support. I am dedicated to streamlining financial processes and providing solutions that optimize workflows.</p>
-        <p>With a deep understanding of both the technical and financial sides of business, I strive to help organizations improve their accounts payable operations and enhance overall efficiency. Here, you can learn more about my skills, experience, and the projects I've worked on.</p>
-        <p>If you're interested in collaborating or have any inquiries, feel free to reach out through my contact page!</p>
+        <h2>Welcome to My Portfolio</h2>
+        <p>Explore my journey as a Sr. Accounts Payable Specialist with expertise in Travel and Expense management and SAP support. Check out my featured projects below.</p>
         <a href="#portfolio" class="btn">Explore My Portfolio</a>
       </div>
     </section>
@@ -297,7 +294,7 @@
     <section id="about">
       <div class="container">
         <h2>About Me</h2>
-        <p>With years of experience in Accounts Payable and SAP support, I am dedicated to delivering high-quality results and optimizing financial workflows.</p>
+        <p>With over X years of experience in Accounts Payable, Travel and Expense management, and SAP L1 support, I am dedicated to delivering quality results and ensuring efficient financial processes.</p>
         <h3>Skills & Experience</h3>
         <ul>
           <li>Accounts Payable - Travel & Expense</li>
@@ -329,7 +326,7 @@
           <button type="submit">Send Message</button>
         </form>
         <div class="social-links">
-          <a href="https://www.instagram.com/jusmac_88?igsh=eHI0cXB0cmlza3Zz">Instagram</a>
+          <a href="https://www.instagram.com/jusmac_88">Instagram</a>
           <a href="https://www.facebook.com/profile.php?id=100072551652323">Facebook</a>
         </div>
       </div>
@@ -345,6 +342,13 @@
   <script>
     document.getElementById('hamburger').addEventListener('click', function () {
       document.getElementById('navLinks').classList.toggle('show');
+    });
+
+    const navLinks = document.querySelectorAll('.nav-links a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', function () {
+        document.getElementById('navLinks').classList.remove('show');
+      });
     });
   </script>
 </body>
