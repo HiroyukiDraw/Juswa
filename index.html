@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -242,15 +243,33 @@
     #backToTop:hover {
       background-color: #217dbb;
     }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: var(--accent-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #217dbb;
+    }
   </style>
 </head>
+
 <body>
   <header>
     <div class="hamburger" id="hamburger">&#9776;</div>
     <div class="container">
       <img src="Ate.jpg" alt="Portrait of Arlene Macaraig" class="profile-pic" />
       <h1>Arlene Macaraig</h1>
-      <p>Sr. Accounts Payable Specialist - Travel and Expense | SAP - L1 Support</p>
+      <p>Sr. Accounts Payable Specialist - Travel and Expense | SAP L1 Support</p>
     </div>
     <nav>
       <div class="nav-container">
@@ -268,7 +287,10 @@
     <section id="home">
       <div class="container">
         <h2>Welcome</h2>
-        <p>Discover my professional journey and featured work.</p>
+        <p>Welcome to my personal portfolio! I am Arlene Macaraig, a seasoned Sr. Accounts Payable Specialist with expertise in managing Travel & Expense and providing SAP L1 support. I am dedicated to streamlining financial processes and providing solutions that optimize workflows.</p>
+        <p>With a deep understanding of both the technical and financial sides of business, I strive to help organizations improve their accounts payable operations and enhance overall efficiency. Here, you can learn more about my skills, experience, and the projects I've worked on.</p>
+        <p>If you're interested in collaborating or have any inquiries, feel free to reach out through my contact page!</p>
+        <a href="#portfolio" class="btn">Explore My Portfolio</a>
       </div>
     </section>
 
@@ -326,4 +348,5 @@
     });
   </script>
 </body>
+
 </html>
